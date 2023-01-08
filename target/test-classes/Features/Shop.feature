@@ -1,9 +1,12 @@
-Feature: check Shopping Functionality
+Feature: Total Cart Amount
 
-Scenario: Simple add to cart function
+Scenario: Validate Total Cart Amount
 
-Given Open url
-When Enter products
-When Enter Credentials
-When Click next
-
+Given User navigates to the website
+And Add Gwyn Endurance Tee medium green to cart
+And Update quantity  Gwyn Endurance Tee medium green to cart
+And Add Gwyn Endurance Tee medium yellow to cart
+And Add Quest Lumaflex band to cart
+Then Check total
+When User fill Address details with country as United Kingdom
+Then Click next to place order
